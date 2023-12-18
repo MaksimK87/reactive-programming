@@ -1,6 +1,5 @@
 package com.epam.reactiveprogramming;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.r2dbc.config.AbstractR2dbcConfiguration;
@@ -23,9 +22,6 @@ import static io.r2dbc.spi.ConnectionFactoryOptions.USER;
 
 @Configuration
 public class Config extends AbstractR2dbcConfiguration {
-
-    @Value("${spring.r2dbc.url}")
-    private String r2dbcUrl;
 
     @Bean
     public R2dbcEntityTemplate r2dbcEntityTemplate(ConnectionFactory connectionFactory) {
